@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tarota - Hoşgeldiniz</title>
+  <title>Tarota - Welcome</title>
   <style>
     :root{
       --glass-bg: rgba(255,255,255,0.12);
@@ -13,7 +13,6 @@
     }
     html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
     body{
-      /* full-screen dreamy gradient + subtle star texture */
       background: radial-gradient(ellipse at 10% 10%, rgba(255,200,120,0.06), transparent 10%),
                   radial-gradient(ellipse at 90% 90%, rgba(120,200,255,0.04), transparent 10%),
                   linear-gradient(135deg,#0f172a 0%, #12263b 50%, #2b1842 100%);
@@ -35,14 +34,14 @@
     h1{margin:0;font-size:22px}
     p.lead{color:var(--muted);margin-top:12px;line-height:1.6}
 
-    .links{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:600;background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--accent);backdrop-filter: blur(6px);transition:transform .12s ease, box-shadow .12s ease}
+    .links{display:flex;gap:24px;margin-top:28px;flex-wrap:wrap;justify-content:flex-start}
+    .btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600;background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--accent);backdrop-filter: blur(6px);transition:transform .12s ease, box-shadow .12s ease}
     .btn:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,0.4)}
     .btn.primary{background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.12)}
 
     footer{margin-top:22px;color:rgba(255,255,255,0.55);font-size:13px}
 
-    @media (max-width:640px){.card{padding:22px}.logo{width:56px;height:56px}.links{flex-direction:column}.btn{width:100%;text-align:center}}
+    @media (max-width:640px){.card{padding:22px}.logo{width:56px;height:56px}.links{flex-direction:column;gap:16px}.btn{width:100%;text-align:center}}
   </style>
 </head>
 <body>
@@ -51,20 +50,20 @@
       <header>
         <div class="logo">T</div>
         <div>
-          <h1>Tarota'a hoş geldiniz</h1>
-          <div style="color:var(--muted);font-size:13px;margin-top:6px">Kısaca: içsel rehberlik, anlık yorumlar ve dijital tarot deneyimi.</div>
+          <h1>Welcome to Tarota</h1>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">Inner guidance, instant insights, and a digital tarot experience.</div>
         </div>
       </header>
 
-      <p class="lead">Tarota uygulamasına hoş geldiniz. Bu site uygulamanın basit tanıtım sayfasıdır — burada uygulamanın gizlilik politikası ve kullanım koşullarına kolayca ulaşabilirsiniz. İsterseniz uygulamayı kullanmadan önce politikaları inceleyin.</p>
+      <p class="lead">Welcome to the Tarota app landing page. Here you can easily access our Privacy Policy and Terms & Conditions. We recommend reviewing these before using the app.</p>
 
-      <div class="links" aria-label="hızlı bağlantılar">
-        <a class="btn primary" href="https://tarotaapp.github.io/docs/privacy_policy.html" target="_blank" rel="noopener">Gizlilik Politikası</a>
-        <a class="btn" href="https://tarotaapp.github.io/docs/terms_and_conditions.html" target="_blank" rel="noopener">Kullanım Koşulları</a>
+      <div class="links" aria-label="quick links">
+        <a class="btn primary" href="https://tarotaapp.github.io/docs/privacy_policy.html" target="_blank" rel="noopener">Privacy Policy</a>
+        <a class="btn" href="https://tarotaapp.github.io/docs/terms_and_conditions.html" target="_blank" rel="noopener">Terms & Conditions</a>
       </div>
 
       <footer>
-        Bu sayfa GitHub Pages ile yayınlanmak üzere hazırlandı. Sayfayı düzenlemek, kopyalamak ve özelleştirmek için HTML dosyasını kullanabilirsiniz.
+        This page was created for publication on GitHub Pages. You can modify, copy, or customize this HTML file as needed.
       </footer>
     </main>
   </div>

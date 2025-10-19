@@ -6,8 +6,7 @@
   <title>Tarota - Welcome</title>
   <style>
     :root {
-      --glass-bg: rgba(255,255,255,0.12);
-      --card-bg: rgba(255,255,255,0.08);
+      --gold: #f5c542;
       --accent: rgba(255,255,255,0.9);
       --muted: rgba(255,255,255,0.75);
     }
@@ -19,9 +18,9 @@
     }
 
     body {
-      background: radial-gradient(ellipse at 10% 10%, rgba(255,200,120,0.06), transparent 10%),
-                  radial-gradient(ellipse at 90% 90%, rgba(120,200,255,0.04), transparent 10%),
-                  linear-gradient(135deg, #0f172a 0%, #12263b 50%, #2b1842 100%);
+      background: radial-gradient(circle at top left, rgba(245,197,66,0.12), transparent 50%),
+                  radial-gradient(circle at bottom right, rgba(245,197,66,0.08), transparent 60%),
+                  linear-gradient(135deg, #000000 0%, #0b0b0b 60%, #1a1a1a 100%);
       color: var(--accent);
       -webkit-font-smoothing: antialiased;
       display: flex;
@@ -34,82 +33,91 @@
     .wrap { max-width: 880px; width: 100%; }
 
     .card {
-      backdrop-filter: blur(8px) saturate(120%);
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      backdrop-filter: blur(10px) saturate(130%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
       border-radius: 18px;
-      padding: 34px;
+      padding: 48px;
       border: 1px solid rgba(255,255,255,0.06);
-      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      box-shadow: 0 8px 40px rgba(245,197,66,0.15);
+      text-align: center;
     }
 
-    header {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-    }
-
-    /* Updated logo style for image */
     .logo {
-      width: 68px;
-      height: 68px;
-      border-radius: 12px;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      margin: 0 auto 20px auto;
+      box-shadow: 0 6px 25px rgba(245,197,66,0.3);
+      border: 2px solid rgba(245,197,66,0.5);
     }
 
     .logo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 12px;
+      border-radius: 50%;
     }
 
-    h1 { margin: 0; font-size: 22px; }
-    p.lead { color: var(--muted); margin-top: 12px; line-height: 1.6; }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      margin-top: 8px;
+    }
+
+    p.lead {
+      color: var(--muted);
+      margin-top: 24px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
 
     .links {
       display: flex;
-      gap: 24px;
-      margin-top: 28px;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 36px;
       flex-wrap: wrap;
-      justify-content: flex-start;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 18px;
+      padding: 12px 22px;
       border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.08);
-      color: var(--accent);
+      color: #f5c542;
+      border: 1px solid rgba(245,197,66,0.5);
+      background: rgba(0,0,0,0.3);
       backdrop-filter: blur(6px);
-      transition: transform .12s ease, box-shadow .12s ease;
+      transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
     }
 
     .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    }
-
-    .btn.primary {
-      background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.12);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(245,197,66,0.25);
+      background: rgba(245,197,66,0.08);
     }
 
     footer {
-      margin-top: 22px;
+      margin-top: 30px;
       color: rgba(255,255,255,0.55);
       font-size: 13px;
     }
 
     @media (max-width:640px) {
-      .card { padding: 22px; }
-      .logo { width: 56px; height: 56px; }
+      .card { padding: 28px; }
+      .logo { width: 70px; height: 70px; }
       .links { flex-direction: column; gap: 16px; }
       .btn { width: 100%; text-align: center; }
     }
@@ -118,18 +126,13 @@
 <body>
   <div class="wrap">
     <main class="card" role="main">
-      <header>
-        <div class="logo">
-          <!-- Replace this file name with your own logo -->
-          <img src="logo.png" alt="Tarota logo">
-        </div>
-        <div>
-          <h1>Welcome to Tarota</h1>
-          <div style="color:var(--muted);font-size:14px;margin-top:6px">
-            Inner Guidance, Instant Insights, Digital Tarot Experience.
-          </div>
-        </div>
-      </header>
+      <div class="logo">
+        <!-- Replace with your logo file -->
+        <img src="logo.png" alt="Tarota logo">
+      </div>
+
+      <h1>Welcome to Tarota</h1>
+      <div class="subtitle">Inner Guidance, Instant Insights, Digital Tarot Experience.</div>
 
       <p class="lead">
         Welcome to Tarota. Here you can easily access our Privacy Policy and Terms & Conditions.
@@ -137,11 +140,13 @@
       </p>
 
       <div class="links" aria-label="quick links">
-        <a class="btn primary" href="https://tarotaapp.github.io/docs/privacy_policy.html" target="_blank" rel="noopener">Privacy Policy</a>
+        <a class="btn" href="https://tarotaapp.github.io/docs/privacy_policy.html" target="_blank" rel="noopener">Privacy Policy</a>
         <a class="btn" href="https://tarotaapp.github.io/docs/terms_and_conditions.html" target="_blank" rel="noopener">Terms & Conditions</a>
       </div>
 
-
+      <footer>
+        © 2025 Tarota. Published via GitHub Pages.
+      </footer>
     </main>
   </div>
 </body>
